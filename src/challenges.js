@@ -3,12 +3,12 @@ function compareTrue(parametro1, parametro2) {
   if (parametro1 === true && parametro2 === true){
     return true;
   }
-  return false;
+    return false;
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
+function calcArea(base, altura) {
+  return ((base * altura) / 2);
 }
 
 // Desafio 3
