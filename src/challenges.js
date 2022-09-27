@@ -37,7 +37,7 @@ function highestCount(maiorIgual) {
     }
   }
   let contador = 0;
-  for (let index = 0; index < maiorIgual.length; index +=1){
+  for (let index = 0; index < maiorIgual.length; index += 1){
     if(maiorIgual[index] === maior){
       contador += 1
     }
@@ -45,11 +45,17 @@ function highestCount(maiorIgual) {
   return contador
 }
 
-
-
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+  let cat1Dist = Math.abs(mouse-cat1);
+  let cat2Dist = Math.abs(mouse-cat2);
+  if (cat1Dist < cat2Dist) {
+    return 'cat1';
+  }
+  else if (cat1Dist > cat2Dist) {
+    return 'cat2';
+  }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -82,4 +88,4 @@ module.exports = {
   highestCount,
   splitSentence,
   techList,
-};
+}
