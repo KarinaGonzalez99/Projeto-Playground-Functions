@@ -17,8 +17,8 @@ function splitSentence(string) {
 }
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
+function concatName(arrayString) {
+  return arrayString.pop() + (', ') + arrayString.shift();
 }
 
 // Desafio 5
