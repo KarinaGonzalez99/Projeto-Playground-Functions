@@ -89,8 +89,20 @@ return vogaisNumeros;
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(tec, name) {
+  if (tec.length === 0) {
+    return 'Vazio!';
+  }
+
+  let tecno = [];
+  tec = tec.sort();
+  for (let index in tec) {
+    tecno.push({
+      tech: tec[index], 
+      name: name 
+    });
+  }
+  return tecno;
 }
 
 module.exports = {
