@@ -23,16 +23,26 @@ return "(" + number11[0] + number11[1] + ") " + number11[2] + number11[3] + numb
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
+let linha1 = (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC));
+let linha2 = (lineB < lineA + lineC && lineB > Math.abs(lineC - lineA));
+let linha3 = (lineC < lineA + lineB && lineC > Math.abs(lineB - lineA));
 
-  let linha1 = (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC));
-  let linha2 = (lineB < lineA + lineC && lineB > Math.abs(lineC - lineA))
-  let linha3 = (lineC < lineA + lineB && lineC > Math.abs(lineB - lineA))
-
-  return linha1 && linha2 && linha3
+return linha1 && linha2 && linha3
 }
+
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+let meuString = string;
+let procurar = /\d+/g;
+let numero = (meuString).match(procurar);
+let total = 0;
+
+for (index in numero ){
+  total += (numero[index] * 1);
+}
+if (total == 1) {
+  return (total + ' ' + 'copo de água');
+} else {return (total + ' ' + 'copos de água')}
 }
 
 module.exports = {
